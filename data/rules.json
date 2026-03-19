@@ -1,7 +1,7 @@
 [
   {
     "id": "6995b8c3068c9abe8b26bfdb",
-    "userId": "34",
+    "userId": "32",
     "name": "AGE动漫",
     "baseUrl": "https://www.agedm.io",
     "logoUrl": "https://cdn.aiqingyu1314.com/age/statics/images/logo.png?v=2025062101",
@@ -43,7 +43,7 @@
     "embedVideoSelector": "iframe#iframeForVideo",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:13:03.658Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -85,7 +85,7 @@
     "embedVideoSelector": "td#playleft>iframe",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -135,7 +135,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": false,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -183,7 +183,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": false,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -225,7 +225,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -267,7 +267,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": false,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -309,7 +309,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -357,7 +357,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.574Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -407,7 +407,7 @@
     "embedVideoSelector": "",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.575Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
     "isEnabled": true,
     "isLocal": true
   },
@@ -455,7 +455,54 @@
     "embedVideoSelector": "div#x-play>iframe",
     "waitForMediaElement": true,
     "videoUrlSubsChar": "",
-    "updateAt": "2026-03-05T03:09:19.575Z",
+    "updateAt": "2026-03-19T11:26:25.212Z",
+    "isEnabled": true,
+    "isLocal": true
+  },
+  {
+    "userId": "",
+    "name": "hjzj1",
+    "baseUrl": "https://www.hjzj1.cc",
+    "logoUrl": "https://www.hjzj1.cc/data/uploadFile/AoIruS1751101011399672.png",
+    "useWebView": true,
+    "version": "1.0",
+    "searchUrl": "/public/auto/search1.html?keyword={keyword}",
+    "searchRequestMethod": "get",
+    "searchRequestBody": {},
+    "searchRequestHeaders": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
+    },
+    "fullSearchUrl": false,
+    "timeout": 10,
+    "searchSelector": "li.q2O60R",
+    "itemImgSelector": "div.qXxWSx>a",
+    "itemImgFromSrc": false,
+    "itemTitleSelector": "h3.title>a",
+    "itemIdSelector": "h3.title>a",
+    "itemGenreSelector": "",
+    "detailUrl": "{mediaId}",
+    "detailRequestMethod": "get",
+    "detailRequestBody": {},
+    "detailRequestHeaders": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
+    },
+    "fullDetailUrl": false,
+    "lineSelector": "div.cms_xianlu_list_state",
+    "episodeSelector": "li>a",
+    "episodeReverse": false,
+    "playerUrl": "{episodeId}",
+    "playerRequestMethod": "get",
+    "playerRequestBody": {},
+    "playerRequestHeaders": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
+    },
+    "fullPlayerUrl": false,
+    "playerVideoSelector": "div#custom_player_box>iframe",
+    "videoElementAttribute": "src",
+    "embedVideoSelector": "",
+    "waitForMediaElement": true,
+    "videoUrlSubsChar": "",
+    "updateAt": "2026-03-19T11:24:36.672Z",
     "isEnabled": true,
     "isLocal": true
   }

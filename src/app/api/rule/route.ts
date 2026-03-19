@@ -1,43 +1,31 @@
 import { NextRequest, NextResponse } from "next/server"
 import { Rule, RuleSchema } from "@/lib/types/rule"
-import fs from "fs"
-import path from "path"
-
-// 规则存储文件路径
-const RULES_FILE = path.join(process.cwd(), "data", "rules.json")
-
-// 确保数据目录存在
-const ensureDataDir = () => {
-  const dataDir = path.join(process.cwd(), "data")
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true })
-  }
-}
+import { kv } from "@vercel/kv"
 
 // 读取规则
-const readRules = (): Rule[] => {
-  ensureDataDir()
-  if (fs.existsSync(RULES_FILE)) {
-    try {
-      const data = fs.readFileSync(RULES_FILE, "utf8")
-      return JSON.parse(data)
-    } catch (error) {
-      console.error("Error reading rules file:", error)
-      return []
-    }
+const readRules = async (): Promise<Rule[]> => {
+  try {
+    const rules = await kv.get<Rule[]>("rules")
+    return rules || []
+  } catch (error) {
+    console.error("Error reading rules:", error)
+    return []
   }
-  return []
 }
 
 // 写入规则
-const writeRules = (rules: Rule[]) => {
-  ensureDataDir()
-  fs.writeFileSync(RULES_FILE, JSON.stringify(rules, null, 2))
+const writeRules = async (rules: Rule[]) => {
+  try {
+    await kv.set("rules", rules)
+  } catch (error) {
+    console.error("Error writing rules:", error)
+    throw new Error("Failed to save rules")
+  }
 }
 
 export async function GET() {
   try {
-    const rules = readRules()
+    const rules = await readRules()
     return NextResponse.json(rules)
   } catch (error) {
     console.error("Error fetching rules:", error)
@@ -60,7 +48,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Get existing rules
-    const existingRules = readRules()
+    const existingRules = await readRules()
 
     // Create a map of existing rules by name for quick lookup
     const existingRulesMap = new Map(existingRules.map((rule) => [rule.name, rule]))
@@ -73,7 +61,7 @@ export async function POST(request: NextRequest) {
     // Convert map back to array
     const updatedRules = Array.from(existingRulesMap.values())
 
-    writeRules(updatedRules)
+    await writeRules(updatedRules)
     return NextResponse.json({ message: "Rules saved successfully" }, { status: 200 })
   } catch (error) {
     console.error("Error saving rules:", error)
